@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Attendance System</h2>
+    <ul id="students"></ul>
+    <script>
+        let students=["marshal","benadict","raja"];
+        let ul=document.getElementById("students");
+        students.forEach(name=>{
+            let li=document.createElement("li");
+            let btn=document.createElement("button");
+            btn.innerHTML="Present";
+            btn.onclick=function(){
+                btn.innerHTML="Present";
+            };
+            li.innerHTML=name+"";
+            li.appendChild(btn);
+            ul.appendChild(li);
+        });
+    </script>
+</body>
+</html>
